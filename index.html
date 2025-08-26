@@ -1,140 +1,106 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>スライドショー作成ツール</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      padding: 20px;
-      background-color: #f4f4f4;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    textarea {
-      width: 100%;
-      height: 150px;
-      padding: 10px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      resize: vertical;
-      font-family: 'Courier New', Courier, monospace;
-      margin-bottom: 10px;
-    }
-    button {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-bottom: 10px;
-      color: white;
-      background-color: #007bff;
-    }
-    button:hover {
-      background-color: #0056b3;
-    }
-    #saveBtn {
-      background-color: #28a745;
-    }
-    #saveBtn:hover {
-      background-color: #218838;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スライドショー作成ツール</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .main-button {
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .main-button:hover {
+            background-color: #0056b3;
+        }
+        .features-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .features-list li {
+            background: #e9f5ff;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 5px solid #007bff;
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>スライドショー作成ツール</h1>
+    <h1>スライドショー作成ツール</h1>
+    <p style="text-align: center; font-style: italic;">画像ファイルのリストから、高機能なHTMLスライドショーを自動で生成します。</p>
 
-  <p>画像ファイル名（0001.jpgなど）を1行に1つずつ入力してください。</p>
-  <textarea id="fileList" placeholder="例：&#10;0001.jpg&#10;0002.jpg&#10;0003.jpg"></textarea>
-  <button id="createBtn">作成</button>
+    <h2>ツールの概要</h2>
+    <p>このツールは、お手持ちの画像ファイル名をリストアップするだけで、HTML/CSS/JavaScriptを完全に含むスライドショーのソースコードを生成します。技術的な知識がなくても、簡単にプロフェッショナルなスライドショーを作成できます。</p>
 
-  <p>生成されたHTMLソースコード</p>
-  <textarea id="outputCode" readonly></textarea>
-  <button id="saveBtn">保存</button>
+    <h2>デモを体験する</h2>
+    <p>ツールがどのようなHTMLファイルを生成するのか、まずは完成品をご覧ください。このデモは、ツールで生成された<code>slideshow-v017.html</code>をそのまま使用しています。</p>
+    <div class="button-container">
+        <a href="slideshow-v017.html" class="main-button">デモを見る</a>
+    </div>
+
+    <h2>ツールを使う</h2>
+    <p>すぐにスライドショーを作成したい方は、こちらからツールを起動してください。お手元の画像ファイル名を入力して「作成」ボタンを押すだけで、あなただけのスライドショーが手に入ります。</p>
+    <div class="button-container">
+        <a href="slideshow_generator_v002.html" class="main-button">ツールを起動</a>
+    </div>
+
+    <h2>主な機能</h2>
+    <ul class="features-list">
+        <li><strong>遅延ロード (Lazy Loading)</strong>: 大量の画像でもページが素早く表示されます。</li>
+        <li><strong>キーボード操作</strong>: PCでは矢印キーでスライドを切り替えられます。</li>
+        <li><strong>スワイプ操作</strong>: スマートフォンやタブレットで指をスワイプして操作できます。</li>
+        <li><strong>全画面表示・自動再生</strong>: ユーザーが自由にスライドショーを制御できます。</li>
+        <li><strong>スタンドアロン</strong>: 生成されたHTMLファイル単体で動作するため、サーバーは不要です。</li>
+    </ul>
+
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const fileListTextarea = document.getElementById('fileList');
-    const createBtn = document.getElementById('createBtn');
-    const outputCodeTextarea = document.getElementById('outputCode');
-    const saveBtn = document.getElementById('saveBtn');
-
-    let htmlTemplate = '';
-
-    // テンプレートファイルを読み込む
-    fetch('slideshow-v017-template.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('テンプレートファイルの読み込みに失敗しました。ファイルが同じフォルダにあるか確認してください。');
-            }
-            return response.text();
-        })
-        .then(template => {
-            htmlTemplate = template;
-            console.log('テンプレートファイルの読み込みに成功しました。');
-            createBtn.disabled = false;
-        })
-        .catch(error => {
-            console.error(error);
-            alert(error.message);
-        });
-
-    createBtn.addEventListener('click', () => {
-        if (!htmlTemplate) {
-            alert('テンプレートファイルの読み込みが完了していません。');
-            return;
-        }
-
-        const fileNames = fileListTextarea.value.split('\n').filter(name => name.trim() !== '');
-        let slidesHtml = '';
-
-        fileNames.forEach((fileName, index) => {
-            const loadingAttribute = index === 0 ? '' : ' loading="lazy"';
-            slidesHtml += `  <div class="slide">
-    <img src="${fileName.trim()}" alt="Slide ${index + 1}"${loadingAttribute}>
-  </div>\n`;
-        });
-
-        const generatedHtml = htmlTemplate.replace('{{slides}}', slidesHtml);
-        outputCodeTextarea.value = generatedHtml;
-    });
-
-    saveBtn.addEventListener('click', () => {
-        const codeToSave = outputCodeTextarea.value;
-        if (!codeToSave) {
-            alert('最初に「作成」ボタンを押してHTMLを生成してください。');
-            return;
-        }
-
-        const blob = new Blob([codeToSave], { type: 'text/html' });
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'slideshow-v017.html';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    });
-});
-</script>
 
 </body>
 </html>

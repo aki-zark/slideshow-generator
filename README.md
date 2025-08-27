@@ -20,7 +20,7 @@
 1.  **ツールを起動**:
     `slideshow_generator_v002.html`をブラウザで開きます。
 
-      * [ツールのURL] ← GitHub PagesのURLをここに挿入します。[リンク](slideshow_generator_v002.html)
+      * [https://aki-zark.github.io/slideshow-generator/slideshow_generator_v002.html](https://aki-zark.github.io/slideshow-generator/slideshow_generator_v002.html)
 
 2.  **ファイル名を入力**:
     テキストエリアに画像ファイルのファイル名を1行に1つずつ入力します。

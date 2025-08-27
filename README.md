@@ -46,6 +46,3 @@
 
   * [デモのURL] ← `slideshow-v017.html`へのURLをここに挿入します。
 
-
-
-

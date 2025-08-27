@@ -44,5 +44,5 @@
 
 ツールが生成するスライドショーがどのようなものか、まずはデモでご確認ください。
 
-  * [https://aki-zark.github.io/slideshow-generator/slideshow-v017.html] (https://aki-zark.github.io/slideshow-generator/slideshow-v017.html)
+  * [https://aki-zark.github.io/slideshow-generator/slideshow-v017.html](https://aki-zark.github.io/slideshow-generator/slideshow-v017.html)
 
